@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#080a0d">
+<title>GLOW90</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+<header class="topbar">
+  <a class="brand" href="#home"><img id="appLogo" alt="GLOW90"><span>GLOW<span>90</span></span></a>
+  <button class="icon-btn" id="notifyBtn" aria-label="Notifications"><i class="ico bell"></i></button>
+</header>
+
+<main id="home" class="screen active">
+  <section class="welcome">
+    <div><p class="eyebrow">90 DAY TRANSFORMATION</p><h1>Become your<br><em>better self.</em></h1><p class="muted">Small habits. Daily consistency. Visible progress.</p></div>
+    <div class="day-pill">DAY <b id="dayNumber">1</b><span>/90</span></div>
+  </section>
+
+  <section class="hero-card card">
+    <div><p class="eyebrow">TODAY'S SCORE</p><div class="score"><strong id="score">0</strong><small>/100</small></div><p class="muted" id="scoreText">Start your first task.</p></div>
+    <div class="ring" id="ring"><div><b id="percent">0%</b><small>complete</small></div></div>
+  </section>
+
+  <div class="section-title"><div><p class="eyebrow">TODAY</p><h2>Your routine</h2></div><button class="text-btn" data-page="routine">View all</button></div>
+  <section id="todayTasks" class="tasks"></section>
+
+  <div class="quick-grid">
+    <button class="mini-card" data-track="water"><i class="ico drop"></i><b>Water</b><small id="waterValue">0 / 8 glasses</small></button>
+    <button class="mini-card" data-track="sleep"><i class="ico moon"></i><b>Sleep</b><small id="sleepValue">Not logged</small></button>
+    <button class="mini-card" data-track="workout"><i class="ico dumbbell"></i><b>Workout</b><small id="workoutValue">Not done</small></button>
+    <button class="mini-card" data-track="skin"><i class="ico sparkle"></i><b>Skincare</b><small id="skinValue">Not done</small></button>
+  </div>
+
+  <section class="tip card"><i class="ico spark"></i><div><b>Daily mindset</b><p id="quote">Consistency beats motivation.</p></div></section>
+</main>
+
+<main id="routine" class="screen">
+  <div class="page-head"><p class="eyebrow">YOUR PLAN</p><h1>Routine</h1><p class="muted">Everything you need to do today.</p></div>
+  <div class="phase card"><span>CURRENT PHASE</span><b id="phase">Foundation</b><small id="phaseDays">Days 1–30</small></div>
+  <section id="allTasks" class="tasks"></section>
+</main>
+
+<main id="progress" class="screen">
+  <div class="page-head"><p class="eyebrow">YOUR JOURNEY</p><h1>Progress</h1></div>
+  <section class="card stats-card"><div><span>STREAK</span><b id="streak">0</b><small>days</small></div><div><span>TASKS</span><b id="totalDone">0</b><small>completed</small></div><div><span>DAY</span><b id="progressDay">1</b><small>/90</small></div></section>
+  <section class="card bars">
+    <div class="bar-row"><span>Skin</span><b id="skinScore">0%</b></div><div class="bar"><i id="skinBar"></i></div>
+    <div class="bar-row"><span>Body</span><b id="bodyScore">0%</b></div><div class="bar"><i id="bodyBar"></i></div>
+    <div class="bar-row"><span>Sleep</span><b id="sleepScore">0%</b></div><div class="bar"><i id="sleepBar"></i></div>
+    <div class="bar-row"><span>Consistency</span><b id="consistencyScore">0%</b></div><div class="bar"><i id="consistencyBar"></i></div>
+  </section>
+  <section class="card photo-card"><div><p class="eyebrow">VISUAL PROGRESS</p><h2>Before & after</h2><p class="muted">Save a private progress photo on this device.</p></div><label class="upload-btn"><i class="ico camera"></i>Add photo<input type="file" id="photoInput" accept="image/*"></label><div id="photos" class="photos"></div></section>
+</main>
+
+<main id="challenge" class="screen">
+  <div class="page-head"><p class="eyebrow">LEVEL UP</p><h1>Challenges</h1></div>
+  <section class="challenge-card card"><span class="badge">WEEKLY</span><h2 id="challengeTitle">No soft drinks today</h2><p class="muted">Complete today's challenge and build your consistency.</p><button class="primary" id="challengeBtn">Complete challenge</button></section>
+  <section class="achievements"><div class="section-title"><div><p class="eyebrow">MILESTONES</p><h2>Achievements</h2></div></div><div class="achievement-grid" id="achievements"></div></section>
+</main>
+
+<main id="profile" class="screen">
+  <div class="page-head"><p class="eyebrow">PERSONAL SPACE</p><h1>Profile</h1></div>
+  <section class="profile-card card"><div class="avatar" id="avatar">G</div><div><h2 id="profileName">GLOW90 Member</h2><p class="muted">90-day transformation journey</p></div></section>
+
+  <div class="settings-list">
+    <button class="setting" id="nameBtn"><span><i class="ico user"></i><b>Profile name</b><small>Change your display name</small></span><i class="ico chevron"></i></button>
+    <button class="setting" id="themeBtn"><span><i class="ico theme"></i><b>Theme</b><small>Switch appearance</small></span><strong id="themeLabel">Dark</strong></button>
+    <button class="setting" id="reminderBtn"><span><i class="ico clock"></i><b>Reminders</b><small>Notification permission</small></span><i class="ico chevron"></i></button>
+  </div>
+
+  <section class="about card">
+    <p class="eyebrow">APP</p><h2>About GLOW90</h2>
+    <p class="muted">A simple 90-day personal routine tracker for skincare, fitness, sleep, hydration, grooming and consistency.</p>
+    <div class="links">
+      <a id="licenseLink" href="#" target="_blank"><i class="ico file"></i>License</a>
+      <a id="ownerDiscord" href="#" target="_blank"><i class="ico discord"></i>Owner Discord</a>
+      <a id="ownerPortfolio" href="#" target="_blank"><i class="ico globe"></i>Owner Portfolio</a>
+      <button id="helpBtn"><i class="ico help"></i>AI Help</button>
+    </div>
+    <p class="version">GLOW90 v1.0.0 • Personal use</p>
+  </section>
+  <button class="danger-btn" id="resetBtn">Reset all progress</button>
+</main>
+
+<nav class="bottom-nav">
+ <button class="nav active" data-page="home"><i class="ico home"></i><small>Home</small></button>
+ <button class="nav" data-page="routine"><i class="ico list"></i><small>Routine</small></button>
+ <button class="nav" data-page="progress"><i class="ico chart"></i><small>Progress</small></button>
+ <button class="nav" data-page="challenge"><i class="ico trophy"></i><small>Challenge</small></button>
+ <button class="nav" data-page="profile"><i class="ico user"></i><small>Profile</small></button>
+</nav>
+<div id="toast"></div>
+<div class="modal" id="helpModal"><div class="modal-box"><button class="close" data-close>×</button><p class="eyebrow">AI HELP</p><h2>Need a little guidance?</h2><p class="muted">Ask about skincare, workout, sleep, hydration or your GLOW90 routine. This button is ready to connect to your preferred AI assistant later.</p><a class="primary link-primary" id="aiLink" href="#" target="_blank">Open AI Help</a></div></div>
+<script src="script.js"></script>
+</body>
+</html>
