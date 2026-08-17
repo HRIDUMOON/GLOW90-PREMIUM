@@ -1,7 +1,7 @@
 const CONFIG={
-  appLogo:"https://cdn.discordapp.com/attachments/1528377904877146273/1531919298497609770/20260718_201445.jpg",
-  ownerDiscord:"https://discord.com/",
-  ownerPortfolio:"#",
+  appLogo:"https://cdn.discordapp.com/attachments/1534994983281623230/1538983935000969307/PNG_-_Pngtree.jpg?ex=6a84a9fb&is=6a83587b&hm=05db9348ddcbbfecad10d8c94aa22a428d7b876e48cf0e1dfe4799440d3fb51d&",
+  ownerDiscord:"https://discord.gg/vYhcdSUdnG",
+  ownerPortfolio:"https://hasanhridoy.site.je/",
   license:"#",
   aiHelp:"https://chatgpt.com/"
 };
